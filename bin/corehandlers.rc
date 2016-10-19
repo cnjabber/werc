@@ -55,6 +55,8 @@ fn md_handler { $formatter $1 }
 
 fn rst_handler { $rst_formatter $1 }
 
+fn asciidoc_handler { $asciidoc_formatter $1 }
+
 fn tpl_handler { template $* }
 
 fn html_handler {
@@ -94,6 +96,10 @@ fn setup_handlers {
     if(test -f $local_path.md) {
         local_file=$local_path.md
         handler_body_main=(md_handler $local_file)
+    }
+    if not if(test -f $local_path.asciidoc) {
+        local_file=$local_path.asciidoc
+        handler_body_main=(asciidoc_handler $local_file)
     }
     if not if(test -f $local_path.rst) {
         local_file=$local_path.rst
