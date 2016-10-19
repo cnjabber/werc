@@ -110,6 +110,10 @@ fn get_html_title {
 fn get_file_title {
     if (~ $1 *.md)
         get_md_title $1
+    if not if(~ $1 *.asciidoc)
+        get_md_title $1
+    if not if(~ $1 *.rst)
+        get_md_title $1
     if not if(~ $1 *.html)
         get_html_title $1
     if not if(~ $1 */) {
