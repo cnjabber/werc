@@ -7,7 +7,7 @@ fn nav_tree {
     # /./ to deal with p9p's ls failure to follow dir symlinks otherwise
     ls -F $sitedir/./$req_paths_list >[2]/dev/null \
         | { 
-            sed $dirfilter'/\/[^_.\/][^\/]*(\.(md|rst|txt|html)|\/)$/!d; s!^'$sitedir'!!; '$dirclean
+            sed $dirfilter'/\/[^_.\/][^\/]*(\.(md|rst|asciidoc|txt|html)|\/)$/!d; s!^'$sitedir'!!; '$dirclean
             if(! ~ $#synth_paths 0) echo $synth_paths | tr ' ' $NEW_LINE 
         } | sort -u | awk -F/ ' 
     function p(x, y, s) { for(i=0; i < x-y; i+=1) print s }
