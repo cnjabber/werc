@@ -1,7 +1,7 @@
     <div class="left">
       <a href="https://matrixim.cc">matrixim.cc</a> |
       <a href="https://blogs.cnjabber.net">cnjabber blogs</a> |
-      <a href="https://vimacs.cnjabber.net">vimacs's articles</a>
+      <a href="https://vimacs.lcpu.club">vimacs's articles</a>
     </div>
 
     <div class="right">
