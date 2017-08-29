@@ -25,7 +25,7 @@ path=($plan9port/bin . ./bin ./bin/contrib /bin /usr/bin)
 #formatter=(md2html.awk)
 #formatter=(fltr_cache markdown.pl)
 formatter=(fltr_cache pandoc_format.sh)
-rst_formatter=(fltr_cache rst2html)
+rst_formatter=(fltr_cache rst2html5.sh)
 asciidoc_formatter=(fltr_cache asciidoc.sh)
 
 # Enable debugging, to disable set to ()

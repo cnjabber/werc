@@ -194,6 +194,10 @@ li ul {
   color:  rgb(100,135,220);
 }
 
+h1.title, p.subtitle {
+  text-align: center;
+}
+
 #main-copy h1, #main-copy h2 {
   color: rgb(0,102,204);
   background-color: transparent;
